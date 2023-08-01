@@ -23,7 +23,7 @@ Sin embargo, a modo de mejora se propone generar un modelo de datos, con el fin 
   
   **a) Los viajes que son similares en términos de origen, destino y hora del día deben agruparse. Describa
   el enfoque que utilizó para agregar viajes similares.**
-  ####Consideraciones y supuestos de la implementación: 
+  #### Consideraciones y supuestos de la implementación: 
   
   - Debido a que el proceso solicitado es para el almacenamiento de datos bajo demanda, es que se genera un método POST con el fin de guardar los valores en la base de datos.
   - Para lograr que los datos se encuentre agrupados dentro de la base de datos, es que se crean índices para ambos valores de localización (origin_coord y destination_coord) y también según la fecha en que se ingresa. Sin embargo, al utilizar la fecha completa no se cumple con lo solicitado, por lo que además, una mejora sería generar nueva columna en el tabla (hour), la cual almacena la hora y permite indexar en base a ese valor.
